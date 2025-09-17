@@ -42,7 +42,7 @@ public class Insecure {
   public String hotspotSQL(Connection connection, String user) throws Exception {
 	  Statement statement = null;
 	  statement = connection.createStatement();
-	  ResultSet rs = statement.executeQuery("select userid from users WHERE username=" + user);
+	  ResultSet rs = statement.executeQuery("select userid2 from users WHERE username=" + user);
 	  return rs.getString(0);
 	}
 
