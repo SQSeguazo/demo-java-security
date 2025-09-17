@@ -38,6 +38,6 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Build and analyze
         env:
-          GITHUB_TOKEN: ${{ secrets.SONAR_TOKEN }}  
-          SONAR_TOKEN: ${{ secrets.SONAR_HOST_URL }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=SQSeguazo_demo-java-security_7cecd782-6ee0-46f1-bdf9-6d7201e1d756 -Dsonar.projectName='demo-java-security'
